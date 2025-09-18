@@ -20,8 +20,17 @@ V = tf.linalg.det(X)
 #Confirmar inversa
 I = tf.linalg.matmul(X,Z)
 
+#Matriz de ceros
+C = tf.zeros([3,3])
+
+#Matriz de unos
+U = tf.ones([2,4])
+
 # Mostrar resultados
 print("Resultado de X * Y:\n", W.numpy())
 print("\nInversa de X:\n", Z)
 print("\nDeterminante de X:\n", V)
 print("\nMatriz X*X^-1(Z):\n", I)
+print("\nMatriz de ceros:\n", C)
+print("\nMatriz de unos:\n", U)
+

@@ -1,1 +1,26 @@
+import tensorflow as tf
+# ======================================================
+# PROPIEDAD 1:
+# Si todos los elementos de una fila o columna son cero,
+# entonces el determinante es igual a cero
+# ======================================================
 
+# Matriz A: primera columna con todos cero
+M = tf.constant([[0, -1, 16],
+                 [0, -7, 5],
+                 [0, 14, 8]], dtype=tf.float32)
+
+# Matriz B: tercera fila con todos ceros
+N = tf.constant([[7, -8, 12],
+                 [-6, 13, -9],
+                 [0, 0, 0]], dtype=tf.float32)
+
+# Cálculo de determinantes
+det_M = tf.linalg.det(M)
+det_N = tf.linalg.det(N)
+
+print("Propiedad 1: Si una fila o columna es cero, det = 0")
+print(M)
+print("Determinante de A:", det_M)
+print(N)
+print("Determinante de B:", det_N)
